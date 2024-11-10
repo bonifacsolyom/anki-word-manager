@@ -1,4 +1,4 @@
-# Anki Deutsch Helfer
+# Anki Word Manager
 
 A React application that helps you learn German vocabulary by integrating with Anki. It automatically generates English translations and example sentences for German words using OpenAI's GPT-4.
 
