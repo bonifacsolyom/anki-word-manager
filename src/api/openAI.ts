@@ -12,7 +12,7 @@ export const fetchWordData = async (
 	word: string,
 	instructions?: string
 ): Promise<WordData | null> => {
-	const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
+	const apiKey = process.env.OPENAI_API_KEY;
 	if (!apiKey) {
 		console.error("OpenAI API key is not set.");
 		return null;
