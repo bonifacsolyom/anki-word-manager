@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { getDecks, createDeck, addNote, getNotes, updateNote, deleteNote } from '../api/ankiConnect';
 import { fetchWordData, WordData } from '../api/openAI';
 import WordList from './WordList';
@@ -13,7 +13,6 @@ const AddWordForm: React.FC = () => {
     const [status, setStatus] = useState('');
     const [addedWords, setAddedWords] = useState<(WordData & { noteId?: number })[]>([]);
     const [editingField, setEditingField] = useState<{ index: number; field: keyof WordData } | null>(null);
-    const editInputRef = useRef<HTMLInputElement | null>(null);
     const [regeneratePopup, setRegeneratePopup] = useState<{ index: number; instructions: string } | null>(null);
 
     useEffect(() => {
@@ -249,6 +248,7 @@ const AddWordForm: React.FC = () => {
                     ...AddWordFormStyles.editableField,
                     display: 'inline-block',
                     minWidth: '1px',
+                    backgroundColor: isEditing ? 'rgba(0, 123, 255, 0.1)' : 'transparent',
                 }}
             >
                 {value}

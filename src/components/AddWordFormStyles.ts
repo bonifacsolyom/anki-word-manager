@@ -92,7 +92,6 @@ const AddWordFormStyles: { [key: string]: React.CSSProperties } = {
         whiteSpace: 'pre-wrap',
         wordBreak: 'break-word',
         outline: 'none',
-        backgroundColor: 'rgba(0, 123, 255, 0.1)', // Slight highlight when editing
     },
     wordList: {
         listStyleType: 'none',

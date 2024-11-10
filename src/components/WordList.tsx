@@ -1,5 +1,4 @@
 import React from 'react';
-import EditableField from './EditableField';
 import RegeneratePopup from './RegeneratePopup';
 import AddWordFormStyles from './AddWordFormStyles';
 import { WordData } from '../api/openAI';
